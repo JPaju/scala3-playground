@@ -1,5 +1,6 @@
-Global / onChangedBuildSource := ReloadOnSourceChanges
-watchBeforeCommand            := Watch.clearScreen
+Global / onChangedBuildSource         := ReloadOnSourceChanges
+Global / watchForceTriggerOnAnyChange := true
+watchBeforeCommand                    := Watch.clearScreen
 
 name         := "scala3-playground"
 scalaVersion := "3.2.2"
