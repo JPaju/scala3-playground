@@ -19,26 +19,12 @@ scalacOptions ++= Seq(
 
 javacOptions ++= Seq("-source", "17")
 
-val zioVersion        = "2.0.6"
-val zioKafkaVersion   = "2.0.0"
-val zioSchemaVersion  = "0.4.1"
+val zioVersion        = "2.0.8"
 val pureconfigVersion = "0.17.2"
 
 libraryDependencies ++= Seq(
-  "dev.zio"               %% "zio"                   % zioVersion,
-  "dev.zio"               %% "zio-streams"           % zioVersion,
-  "dev.zio"               %% "zio-kafka"             % zioKafkaVersion,
-  "dev.zio"               %% "zio-schema"            % zioSchemaVersion,
-  "dev.zio"               %% "zio-schema-avro"       % zioSchemaVersion,
-  "dev.zio"               %% "zio-schema-derivation" % zioSchemaVersion,
-  "com.github.pureconfig" %% "pureconfig-core"       % pureconfigVersion,
-  "com.sksamuel.avro4s"   %% "avro4s-core"           % "5.0.3",
-  ("com.sksamuel.avro4s"  %% "avro4s-kafka"          % "4.1.0")
-    .cross(CrossVersion.for3Use2_13)
-    .excludeAll(ExclusionRule(organization = "com.sksamuel.avro4s"))
+  "dev.zio"               %% "zio"             % zioVersion,
+  "dev.zio"               %% "zio-streams"     % zioVersion,
+  "com.github.pureconfig" %% "pureconfig-core" % pureconfigVersion,
+  "com.sksamuel.avro4s"   %% "avro4s-core"     % "5.0.3"
 )
-
-libraryDependencies ++= Seq(
-  "dev.zio" %% "zio-test"     % zioVersion,
-  "dev.zio" %% "zio-test-sbt" % zioVersion
-).map(_ % Test)
