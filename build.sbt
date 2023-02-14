@@ -1,6 +1,6 @@
 Global / onChangedBuildSource         := ReloadOnSourceChanges
+Global / watchBeforeCommand           := Watch.clearScreen
 Global / watchForceTriggerOnAnyChange := true
-watchBeforeCommand                    := Watch.clearScreen
 
 name         := "scala3-playground"
 scalaVersion := "3.2.2"
@@ -11,8 +11,8 @@ connectInput := true
 scalacOptions ++= Seq(
   "-deprecation",
   "-feature",
-  "-explain",
-  "-Ycheck-all-patmat",
+  "-unchecked",
+  "-Xfatal-warnings",
   "-Ykind-projector",
   "-Ysafe-init"
 ) ++ Seq("-source", "future")
