@@ -1,4 +1,9 @@
-## sbt project compiled with Scala 3
+## Scala 3 playground
+
+Requirements
+------------
+- [sbt](https://www.scala-sbt.org/download.html)
+- [Java v17 or newer](https://adoptium.net/)
 
 ### Usage
 
